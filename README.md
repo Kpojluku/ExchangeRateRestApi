@@ -11,3 +11,21 @@ Example:
 * Spring Boot
 * Gradle
 * Feign
+
+# Endpoints
+
+- api/compareExchangeRates?currency=rub - takes a currency code as a parameter  
+returns gif depending on the USD exchange rate
+
+example: http://localhost:8081/api/compareExchangeRates?currency=rub
+
+# How to start
+
+* Clone the repository  
+git clone https://github.com/Kpojluku/ExchangeRateRestApi.git
+* Perform the command  
+  ./gradlew build
+* Build the docker image  
+docker image build -t exchange_rate_app .
+* run the docker container  
+docker run -p 8081:8081 exchange_rate_app

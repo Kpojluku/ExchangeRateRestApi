@@ -13,6 +13,6 @@ public interface ExchangeRatesClient {
     @GetMapping("/{date}.json")
     ResponseEntity<CurrencyRateDTO> getCurrency(@PathVariable("date") String date,
                                                 @RequestParam("app_id") String id,
-                                                @RequestParam(value = "symbols", defaultValue = "USD") String currencyCode);
+                                                @RequestParam(value = "symbols") String currencyCode);
 
 }

@@ -2,6 +2,7 @@ package com.golstov.restapp.service.impl;
 
 import com.golstov.restapp.dto.CurrencyRateDTO;
 import com.golstov.restapp.dto.GifDTO;
+import com.golstov.restapp.exeption.BadCurrencyCodeException;
 import com.golstov.restapp.service.CurrencyService;
 import com.golstov.restapp.service.DownloadService;
 import com.golstov.restapp.service.ExchangeRatesService;
@@ -42,8 +43,7 @@ public class ExchangeRatesServiceImpl implements ExchangeRatesService {
 
         if (!isCurrencyCodeValid(currency)) {
             logger.error("Currency code is incorrect");
-//            throw new BadBaseException("Currency code must be 3 characters");
-            throw new RuntimeException("Currency code must be 3 characters");
+            throw new BadCurrencyCodeException("Currency code must be 3 characters");
         }
         currency = currency.toUpperCase();
         logger.info("Current currency code: " + currency);

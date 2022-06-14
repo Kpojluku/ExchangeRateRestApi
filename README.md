@@ -29,3 +29,5 @@ git clone https://github.com/Kpojluku/ExchangeRateRestApi.git
 docker image build -t exchange_rate_app .
 * run the docker container  
 docker run -p 8081:8081 exchange_rate_app
+
+![image](https://user-images.githubusercontent.com/67160882/173701323-bfa37820-3c4a-4b93-9978-c9230a694032.png)
